@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.hero{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3)),url(img/brown-coffee.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+    
+}
+
+.nav-bar{
+    display: flex;
+    padding: 40px 120px;
+}
+
+.nav-logo h1 {
+    width: 135px;
+    color: aliceblue;
+}
+
+.nav-links {
+    flex: 1;
+}
+
+.nav-links ul {
+    margin-left: 50px;
+    display: inline;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 20px;
+}
+.nav-links ul a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: "";
+    width: 0%;
+    height: 8px;
+    background: yellowgreen;
+    display: block;
+    margin: auto;
+    margin-top: 6px;
+    transition: 0.3s all ease;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.808);
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.btn {
+    padding: 10px 20px;
+    border: 00;
+    background: rgb(147, 253, 40);
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.2s all ease;
+}
+.btn:hover{
+    background: rgb(149, 216, 15);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.808);
+    /* border-radius: 10px; */
+}
+.nav-links .btn{
+    float: right;
+}
+.banner-title{
+    margin: 80px 130px;
+    color: aliceblue;
+}
+.banner-title h1{
+    font-size: 64px;
+    margin-bottom: 30px;
+}
+.banner-title h1 span {
+    color: rgb(147, 253, 40);
+}
+
+/* banner */
+/* end of banner */
+
+/* vertical bar  */
+.vertical-bar{
+    height: 100%;
+    background: rgb(235, 235, 235);
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.search-icon{
+    height: 60%;
+    width: 80px;
+}
+.search-icon .fas{
+    margin: 45px 23px;
+    display: block;
+    color: rgb(32, 32, 32);
+    font-size: 30px;
+    cursor: pointer;
+    /* z-index: 2; */
+}
+.social-icons{
+    height: 35%;
+    width: 80px;
+    background: rgb(147, 253, 40);
+    text-align: center;
+    padding-top: 27%;
+    bottom: 0;
+    position: absolute;
+}
+.social-icons .fab{
+    margin: 15px 23px;
+    display: block;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* end of vertical bar  */
+
+/* notifications */
+.notifications{
+    display: flex;
+    width: 400px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background: chartreuse;
+    align-items: center;
+}
+.contents{
+    flex-basis: 50%;
+    padding: 10px;
+}
+.notification-img{
+    flex-basis: 50%;
+}
+.notification-img img{
+    width: 100%;
+}
+.contents a{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    margin: 0 10px;
+}
+.contents p{
+    text-align: right;
+    margin-top: 10px;
+}
+.nav-bar .fas{
+    display: none;
+}
+/* end of notifications */
+
+/* Responsiveness  */
+@media (max-width: 700px){
+    .vertical-bar{
+        display: none;
+    }
+    .banner-title{
+        margin: 80px 40px;
+    }
+    .banner-title h1{
+        font-size: 50px;
+    }
+    .notifications{
+        width: 100%;
+    }
+    .nav-bar{
+        padding: 10px 30px;
+    }
+    
+}
+
+@media (max-width: 1080px){
+    .fa-bars{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    .nav-bar .fas{
+        display: block;
+        color: aliceblue;
+        margin: 10px 25px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links{
+        height: 100vh;
+        width: 200px;
+        background: #000;
+        top: 0%;
+        right: -200px;
+        position: absolute;
+        text-align: left;
+        z-index: 1;
+        transition: 0.3s;
+    }
+    .nav-links ul a{
+        display: block;
+    }
+    .nav-links .btn{
+        float: none;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+}
